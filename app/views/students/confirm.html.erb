@@ -1,0 +1,13 @@
+<h3> Envoyer avec le contenu suivant ?</h3>
+
+<%= form_with(model: @student, url: students_path(@student), local: true) do |form| %>
+  <%= form.hidden_field :last_name %>
+  <%= form.hidden_field :first_name %>
+  <%= form.hidden_field :age %>
+  <p>Last Name : <%= @student.last_name %></p>
+  <p>First Name : <%= @student.first_name %></p>
+  <p>Age : <%= @student.age %></p>
+  <%= form.submit  "L'enregistrer" %>
+  <%= form.submit  "Retour", name: 'back'%>
+<% end %>
+
